@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lehlogonolo Mpye | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About&nbsp;Me</a></li>
+        <li><a href="#services">My&nbsp;Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact&nbsp;Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <h1>Hello I'm <span>Lehlogonolo Mpye</span></h1>
+      <h2>Creative Problem Solver in Data & Code</h2>
+      <p>I'm passionate about turning complex data into simple, powerful solutions.</p>
+      <a href="#contact" class="cta-button">Let's Connect</a>
+    </div>
+    <div class="hero-right">
+      <div class="circle-wrapper">
+        <img src="Portrait Photo.jpg" alt="Lehlogonolo Mpye portrait" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="about">
+    <div class="about-wrapper">
+
+      <!-- Intro -->
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I’m <strong>Lehlogonolo Mpye</strong>, a data enthusiast who loves turning raw numbers into actionable insights. After completing an intensive Data Science programme at Digital Regenesys (2024–2025), I’m focused on projects that merge analytics, code, and design.</p>
+        <p>My toolkit spans Python, SQL, Power BI, Tableau, and AWS — but my favourite skill is <em>storytelling with data</em>. When I’m not coding, you’ll find me sketching assistive‑tech ideas like <q>HeardYou</q>.</p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="tab-buttons">
+        <button class="tab-button active" data-tab="skills">Skills</button>
+        <button class="tab-button" data-tab="experience">Experience</button>
+        <button class="tab-button" data-tab="education">Education</button>
+        <button class="tab-button" data-tab="certificates">Certificates</button>
+      </div>
+
+      <!-- Tab Content Panels -->
+      <div id="skills" class="tab-content active">
+        <ul class="tab-list">
+          <li>Python, SQL, Excel</li>
+          <li>Power BI, Tableau, MongoDB</li>
+          <li>Machine Learning, Deep Learning, Time Series</li>
+          <li>PySpark, AWS, Web Development</li>
+        </ul>
+      </div>
+
+      <div id="experience" class="tab-content">
+        <p>No formal job experience yet — but I’ve completed multiple data projects, built dashboards, and developed full‑stack prototypes during my studies.</p>
+      </div>
+
+      <div id="education" class="tab-content">
+        <ul class="tab-list">
+          <li><strong>Digital Regenesys</strong> — Data Science Programme (Feb 2024 – May 2025)</li>
+          <li><strong>Hoërskool Hercules</strong> — Matric, 2023</li>
+        </ul>
+      </div>
+
+      <div id="certificates" class="tab-content">
+        <ul class="tab-list">
+          <li>Basic Data Science – Python, MySQL, Data Fundamentals</li>
+          <li>Add‑ons: R Programming, Tableau, MongoDB</li>
+          <li>Advanced Data Science – Machine Learning, Deep Learning, Web Dev</li>
+          <li>Advanced Data Science – CV, NLP, Time Series</li>
+          <li>Applied Data Science – AWS, PySpark, MLOps</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services">
+    <h2>My Services</h2>
+    <p><!-- add service cards later --></p>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <p><!-- add project cards later --></p>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:lehlogonolo189@gmail.com">lehlogonolo189@gmail.com</a></p>
+    <p>Phone: +27&nbsp;67&nbsp;610&nbsp;9482</p>
+    <p>GitHub: <a href="https://github.com/Chlowie-cyber" target="_blank">Chlowie‑cyber</a></p>
+    <p>LinkedIn: <!-- add link --></p>
+  </section>
+
+  <!-- TAB SCRIPT -->
+  <script>
+    document.querySelectorAll('.tab-button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(p => p.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
