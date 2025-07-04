@@ -7,13 +7,21 @@
 
 html, body {
   scroll-behavior: smooth;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* original elegant gradient */
+  color: #e1e5ea;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: system-ui, sans-serif;
-  color: #e1e5ea;
   background: #0b0c10;
-  line-height: 1.5;
+  color: #e1e5ea;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 /* ---------- Color Variables ---------- */
@@ -29,48 +37,56 @@ body {
   top: 0;
   width: 100%;
   z-index: 200;
-  background: rgba(11, 12, 16, 0.8);
+  background: rgba(15, 32, 39, 0.8);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
-  justify-content: center;
   gap: 2rem;
+  list-style: none;
+  justify-content: center;
   padding: 1rem 0;
+  margin: 0;
 }
 
 .navbar a {
-  color: var(--primary);
+  color: #00ffd5;
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.25s ease;
 }
 
-.navbar a:hover { opacity: 0.7; }
+.navbar a:hover { 
+  opacity: 0.7; 
+}
 
 /* ---------- Hero Section ---------- */
 .hero {
-  min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
-  gap: 3rem;
-  padding: 8rem 4rem 4rem; /* leaves room for fixed nav */
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  align-items: center;
+  padding: 8rem 4rem 4rem;
+  min-height: 100vh;
+  background: transparent;
+  color: #e1e5ea;
 }
 
-.hero-left { max-width: 600px; flex: 1 1 320px; }
+.hero-left { 
+  max-width: 600px; 
+  flex: 1; 
+}
 
 .hero-left h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
-.hero-left h1 span { color: var(--primary); }
+.hero-left h1 span { 
+  color: #00ffd5; 
+}
 
 .hero-left h2 {
   font-weight: 400;
@@ -79,32 +95,50 @@ body {
   color: #cccccc;
 }
 
-.hero-left p { margin-bottom: 2rem; }
+.hero-left p { 
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #dddddd;
+}
 
 .cta-button {
   display: inline-block;
   padding: 0.8rem 2rem;
-  background: var(--primary);
-  color: #0b0c10;
+  background: #00ffd5;
+  color: #000;
   font-weight: bold;
   border-radius: 8px;
   text-decoration: none;
   transition: transform 0.25s;
 }
 
-.cta-button:hover { transform: scale(1.05); }
+.cta-button:hover { 
+  transform: scale(1.05); 
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
 
 /* Hero photo */
 .circle-wrapper {
-  width: 380px;
-  height: 380px;
+  width: 360px;
+  height: 360px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 24px 10px rgba(0, 255, 213, 0.35);
   animation: float 6s ease-in-out infinite;
 }
 
-.circle-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.circle-wrapper img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
 
 @keyframes float {
   0%,100%{ transform: translateY(0);}
@@ -112,13 +146,32 @@ body {
 }
 
 /* ---------- About Section & Tabs ---------- */
-.about { padding: 6rem 2rem; }
+.about { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 6rem 2rem;
+  background: transparent;
+  color: #e1e5ea;
+}
 
-.about-wrapper { max-width: 900px; margin: 0 auto; }
+.about-text { 
+  flex: 1 1 320px;
+  max-width: 600px;
+}
 
-.about-text h2 { font-size: 2rem; margin-bottom: 1.2rem; color: var(--primary); }
+.about-text h2 { 
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #00ffd5 
+}
 
-.about-text p { margin-bottom: 1rem; }
+.about-text p { 
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
 
 .tab-buttons {
   display: flex;
@@ -171,3 +224,140 @@ body {
 }
 
 .services h2, .projects h2, .contact h2 { color: var(--primary); margin-bottom: 1.2rem; }
+
+/* ---------------  GLASS CARD (reusable) --------------- */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 0 12px rgba(0, 224, 255, 0.3);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: #e1e5ea;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+  flex: 1 1 260px;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px 4px rgba(0, 224, 255, 0.6);
+  border: 1px solid rgba(0, 224, 255, 0.5);
+}
+
+/* CONTACT Layout*/
+.contact {
+  padding: 6rem 2rem;
+}
+
+.contact-wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Left column */
+.conttact-info {
+  flex: 1 1 260px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.conttact-info i {
+  color: var(--primary);
+  margin-right: 5rem;
+}
+
+.conttact-info a {
+  color: #e1e5ea;
+  text-decoration: none;
+}
+
+.cv-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: .6rem 1.4rem;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: background .25s, color 0.25s;
+}
+
+.cv-btn:hover {
+  background: var(--primary);
+  color: #0b0c10;
+}
+
+/* Right column - form */
+.contact-form {
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.double {
+  display: flex;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: .9rem 1rem;
+  border: #fff;
+  border-radius: 8px;
+  background: #fff;
+  color: #000;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(0, 224, 255,.25);
+}
+
+.submit-btn {
+  align-self: flex-start;
+  background: var(--primary);
+  color: #0b0c10;
+  font-weight: bold;
+  padding: .8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform .25s;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Stack columns & fields on small screens */
+@media (max-width: 640px) {
+  .contact-wrap {
+    flex-direction: column;
+  }
+  .double {
+    flex-direction: column;
+  }
+  .contact-info, .contact-form {
+    flex: 1 1 100%;
+  }
+}

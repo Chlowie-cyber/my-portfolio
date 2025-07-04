@@ -102,25 +102,38 @@
   </section>
 
   <!-- CONTACT SECTION -->
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:lehlogonolo189@gmail.com">lehlogonolo189@gmail.com</a></p>
-    <p>Phone: +27&nbsp;67&nbsp;610&nbsp;9482</p>
-    <p>GitHub: <a href="https://github.com/Chlowie-cyber" target="_blank">Chlowie‑cyber</a></p>
-    <p>LinkedIn: <!-- add link --></p>
-  </section>
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
 
-  <!-- TAB SCRIPT -->
-  <script>
-    document.querySelectorAll('.tab-button').forEach(button => {
-      button.addEventListener('click', () => {
-        document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(p => p.classList.remove('active'));
-        button.classList.add('active');
-        document.getElementById(button.dataset.tab).classList.add('active');
-      });
-    });
-  </script>
+  <div class="contact-wrap"><!-- wrapper START -->
 
-</body>
-</html>
+    <!-- LEFT : details -->
+    <div class="contact-info">
+      <p><i class="fa-solid fa-envelope"></i> <a href="mailto:lehlogonolo189@gmail.com">lehlogonolo189@gmail.com</a></p>
+      <p><i class="fa-solid fa-phone"></i> +27 67 610 9482</p>
+      <p><i class="fa-brands fa-github"></i> <a href="https://github.com/Chlowie-cyber" target="_blank">GitHub</a></p>
+      <p><i class="fa-brands fa-linkedin"></i> <a href="#" target="_blank">LinkedIn</a></p>
+
+      <!-- CV download -->
+      <a href="Lehlogonolo Mpye_CV .pdf" class="cv-btn" download>
+        <i class="fa-solid fa-file-arrow-down"></i> Download CV (PDF)
+      </a>
+    </div>
+
+    <!-- RIGHT : form -->
+    <form class="contact-form" action="https://formspree.io/f/mldnvkke" method="POST">
+      <input type="hidden" name="_subject" value="New Equiry from Portfolio Site">
+      <div class="double">
+        <input type="text" name="name" placeholder="First Name" required>
+        <input type="text" name="surname" placeholder="Surname" required>
+      </div>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <textarea name="message" rows="7" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+
+  </div><!-- wrapper END -->
+</section>
