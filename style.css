@@ -350,14 +350,42 @@ body {
 }
 
 /* Stack columns & fields on small screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    background: #0f2027;
+    padding: 6rem 1.5rem 2rem;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .circle-wrapper {
+    width: 220px;
+    height: 220px;
+    margin-top: 2rem;
+  }
+}
+
 @media (max-width: 640px) {
+  /* Stack columns */
   .contact-wrap {
     flex-direction: column;
+    gap: 1.5rem;
   }
-  .double {
+
+  /* Stack first-name & surname inputs */
+  .contact-form .double {
     flex-direction: column;
+    gap: 1rem;
   }
-  .contact-info, .contact-form {
-    flex: 1 1 100%;
+
+  /* Full-width buttons */
+  .cv-btn,
+  .submit-btn {
+    width: 100%;
+    text-align: center;
   }
 }
