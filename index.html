@@ -57,36 +57,49 @@
 
       <!-- Tab Content Panels -->
       <div id="skills" class="tab-content active">
-        <ul class="tab-list">
-          <li>Python, SQL, Excel</li>
-          <li>Power BI, Tableau, MongoDB</li>
-          <li>Machine Learning, Deep Learning, Time Series</li>
-          <li>PySpark, AWS, Web Development</li>
-        </ul>
-      </div>
+  <ul class="tab-list">
+    <li>Python, SQL, Excel</li>
+    <li>Power BI, Tableau, MongoDB</li>
+    <li>Machine Learning, Deep Learning, Time Series</li>
+    <li>PySpark, AWS, Web Development</li>
+  </ul>
+</div>
 
-      <div id="experience" class="tab-content">
-        <p>No formal job experience yet — but I’ve completed multiple data projects, built dashboards, and developed full‑stack prototypes during my studies.</p>
-      </div>
+<div id="experience" class="tab-content">
+  <p>No formal job experience yet — but I’ve completed many projects and dashboards during my studies.</p>
+</div>
 
-      <div id="education" class="tab-content">
-        <ul class="tab-list">
-          <li><strong>Digital Regenesys</strong> — Data Science Programme (Feb 2024 – May 2025)</li>
-          <li><strong>Hoërskool Hercules</strong> — Matric, 2023</li>
-        </ul>
-      </div>
+<div id="education" class="tab-content">
+  <ul class="tab-list">
+    <li><strong>Digital Regenesys</strong> — Data Science Programme (2024–2025)</li>
+    <li><strong>Hoërskool Hercules</strong> — Matric, 2023</li>
+  </ul>
+</div>
 
-      <div id="certificates" class="tab-content">
-        <ul class="tab-list">
-          <li>Basic Data Science – Python, MySQL, Data Fundamentals</li>
-          <li>Add‑ons: R Programming, Tableau, MongoDB</li>
-          <li>Advanced Data Science – Machine Learning, Deep Learning, Web Dev</li>
-          <li>Advanced Data Science – CV, NLP, Time Series</li>
-          <li>Applied Data Science – AWS, PySpark, MLOps</li>
-        </ul>
-      </div>
+<div id="certificates" class="tab-content">
+  <ul class="tab-list">
+    <li>Basic DS – Python, MySQL, Data Fundamentals</li>
+    <li>Add-ons: R, Tableau, MongoDB</li>
+    <li>Advanced DS – ML, DL, Web Dev, CV, NLP, Time Series</li>
+    <li>Applied DS – AWS, PySpark, MLOps</li>
+  </ul>
+</div>
 
-    </div>
+<script>
+  // Enable tab switching
+  document.querySelectorAll('.tab-button').forEach(button => {
+    button.addEventListener('click', () => {
+      // Remove active from all buttons and tab contents
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+
+      // Activate the clicked button and matching content
+      button.classList.add('active');
+      const tabId = button.getAttribute('data-tab');
+      document.getElementById(tabId).classList.add('active');
+    });
+  });
+</script>
   </section>
 
   <!-- SERVICES SECTION -->
@@ -137,3 +150,5 @@
 
   </div><!-- wrapper END -->
 </section>
+
+
